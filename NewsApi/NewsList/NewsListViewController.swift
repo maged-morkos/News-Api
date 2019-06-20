@@ -38,6 +38,14 @@ class NewsListViewController: UIViewController {
     @objc func refresh(sender:AnyObject) {
         getTopHeadLines()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NewsDetails" {
+            let articleModel = sender as! ArticleModel
+            let newsDetailsView = segue.destination as! NewsDetailsViewController
+            newsDetailsView.articleModel = articleModel
+        }
+    }
 }
 
 extension NewsListViewController : reloadTopHeadLines{
@@ -58,7 +66,8 @@ extension NewsListViewController : reloadTopHeadLines{
 
 extension NewsListViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let articleModel = articlesList[indexPath.row]
+        self.performSegue(withIdentifier: "NewsDetails", sender: articleModel)
     }
 }
 extension NewsListViewController : UITableViewDataSource{
