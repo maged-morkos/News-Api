@@ -31,7 +31,7 @@ class NewsListViewController: UIViewController {
     }
     
     func initPullToRefresh() {
-        refreshControl.attributedTitle = NSAttributedString(string: "Powered by NewsApi.com")
+        refreshControl.attributedTitle = NSAttributedString(string: "Powered by NewsApi.org")
         refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)
         newsTableView.addSubview(refreshControl)
     }
