@@ -9,6 +9,7 @@ target 'NewsApi' do
   pod 'Alamofire'
   pod 'AlamofireObjectMapper', '~> 5.2'
   pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SDWebImage'
   target 'NewsApiTests' do
     inherit! :search_paths
     # Pods for testing

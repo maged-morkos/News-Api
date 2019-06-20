@@ -13,24 +13,69 @@
         <!--News API-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewsApi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewsListViewController" customModule="NewsApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-zr-Vx8">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="229" id="ndX-on-DnK">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="229"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="293" id="ndX-on-DnK" customClass="NewsTableViewCell" customModule="NewsApi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ndX-on-DnK" id="7Je-Xf-BjQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="228.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="292.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qL0-fd-Mgq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="190" id="wFo-Fl-ue1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donald Trump Jr blasts Joe Biden, asks why he didn’t ‘cure cancer’ in last 50 years - Fox News" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vB4-cX-D1X">
+                                                    <rect key="frame" x="20" y="198" width="374" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="hjj-bu-IJ5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N76-qn-hr9">
+                                                    <rect key="frame" x="20" y="256" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qL0-fd-Mgq" firstAttribute="leading" secondItem="7Je-Xf-BjQ" secondAttribute="leading" id="BHC-S5-QCZ"/>
+                                                <constraint firstItem="N76-qn-hr9" firstAttribute="leading" secondItem="7Je-Xf-BjQ" secondAttribute="leadingMargin" id="CSU-Pd-iVT"/>
+                                                <constraint firstItem="N76-qn-hr9" firstAttribute="top" secondItem="vB4-cX-D1X" secondAttribute="bottom" constant="8" id="IHY-lG-VsR"/>
+                                                <constraint firstItem="vB4-cX-D1X" firstAttribute="leading" secondItem="7Je-Xf-BjQ" secondAttribute="leadingMargin" id="Ijs-vO-GmN"/>
+                                                <constraint firstItem="vB4-cX-D1X" firstAttribute="top" secondItem="qL0-fd-Mgq" secondAttribute="bottom" constant="8" id="NjU-b4-0hn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="N76-qn-hr9" secondAttribute="bottom" constant="5" id="RgX-UY-kxJ"/>
+                                                <constraint firstItem="N76-qn-hr9" firstAttribute="trailing" secondItem="7Je-Xf-BjQ" secondAttribute="trailingMargin" id="Ske-4O-jxH"/>
+                                                <constraint firstItem="qL0-fd-Mgq" firstAttribute="top" secondItem="7Je-Xf-BjQ" secondAttribute="top" id="Swv-Mi-D7h"/>
+                                                <constraint firstItem="vB4-cX-D1X" firstAttribute="trailing" secondItem="7Je-Xf-BjQ" secondAttribute="trailingMargin" id="uZK-Dy-ND0"/>
+                                                <constraint firstAttribute="trailing" secondItem="qL0-fd-Mgq" secondAttribute="trailing" id="xKL-DS-Ajb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerImageView" destination="qL0-fd-Mgq" id="moE-fa-J6q"/>
+                                            <outlet property="publishedDateLabel" destination="N76-qn-hr9" id="mG8-hU-Npc"/>
+                                            <outlet property="titleLabel" destination="vB4-cX-D1X" id="iZb-u5-veN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ujQ-5t-gT1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l6i-zw-Bsd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,6 +88,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="News API" id="SWI-cz-iVw"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="wIv-zr-Vx8" id="OcD-lO-a6a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,8 +101,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P4l-Ui-WUI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="J1i-5G-hpP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J1i-5G-hpP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
