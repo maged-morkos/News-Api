@@ -33,18 +33,4 @@ class NetworkManager: NSObject {
             }
         }
     }
-//    typealias apiCompleation =  (_ success: Bool, _ dataModel: MostPopularResultList) -> Void
-    
-//    func getMostViewdArticals(completionHandler: @escaping apiCompleation) {
-//        let params = ["api-key" : "UHpPLuDPB8rLG4hASGDxvd2TEg9jTb7Z"]
-//        Alamofire.request(ApiUrls.mostViewd.url,parameters: params, encoding: URLEncoding(destination: .queryString)).responseObject { (response: DataResponse<MostPopularResultList>) in
-//            if let mostPopularResponse = response.result.value{
-//                if mostPopularResponse.results!.count > 0{
-//                    completionHandler(true, mostPopularResponse)
-//                }else{
-//                    completionHandler(false, mostPopularResponse)
-//                }
-//            }
-//        }
-//    }
 }
